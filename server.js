@@ -6,6 +6,8 @@ var routes = require('./routes/index');
 var crud = require('./api/crud');
 var app = express();
 
+app.set('port', (process.env.PORT || 5000));
+
 function renderF(req, res) {
 	res.sendFile(path.join(__dirname, '/', 'public', 'index.html'));
 }
@@ -19,7 +21,7 @@ app.use(cookieParser());
 app.use(crud);
 app.get('*', renderF);
 
-var server = app.listen(5000, function() {
+var server = app.listen(app.get('port'), function() {
 	var host = server.address().address
 	var port = server.address().port
 	console.log("Run at http://%s:%s", host, port)

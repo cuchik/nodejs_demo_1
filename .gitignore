@@ -1,10 +1,13 @@
 # Node build artifacts
 node_modules
 npm-debug.log
+tsconfig.json
+tslint.json
 
 # Local development
 *.env
 *.dev
+*.editorconfig
 .DS_Store
 
 # Docker
