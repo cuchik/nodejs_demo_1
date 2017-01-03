@@ -1,0 +1,12 @@
+<h2>My Vocabs</h2>
+<ul class="heroes">
+  <li *ngFor="let vocab of vocabs">
+    <span>{{vocab.en}} : {{vocab.vn}}</span><span class="delete_button" (click)="deleteVocab(vocab)">Delete</span>
+  </li>
+</ul>
+<h2>Add Vocab</h2>
+<form action="" name="addVocab">
+	<input type="text" name="en" placeholder="EN" [(ngModel)]="en">
+	<input type="text" name="vn" placeholder="VN" [(ngModel)]="vn">
+	<button type="button" name="submit" id="submit_vocab" (click)="addVocab()">Add</button>
+</form>

@@ -1,0 +1,16 @@
+<h2>My Theme</h2>
+<ul class="heroes">
+  <li *ngFor="let theme of themes">
+    <a routerLink="/detail/{{theme.name}}">{{theme.name}}</a>
+    <span (click)="deleteTheme(theme.name)" class="delete_button"> Delete</span>
+  </li>
+</ul>
+<form action="" name="addTheme">
+	<input type="text" name="name" placeholder="Name" [(ngModel)]="name">
+	<button type="button" name="submit" id="submit_theme" (click)="addTheme()">Add</button>
+</form>
+<!-- 
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
